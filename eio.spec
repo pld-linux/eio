@@ -9,18 +9,20 @@
 Summary:	Enlightenment Input Output Library
 Summary(pl.UTF-8):	Enlightenment Input Output - biblioteka wejścia/wyjścia z projektu Enlightenment
 Name:		eio
-Version:	0.1.0.65643
-Release:	2
+Version:	1.0.0
+Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	http://download.enlightenment.org/snapshots/LATEST/%{name}-%{version}.tar.bz2
-# Source0-md5:	244d07702020c919a6f99b2b1856da9a
+Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
+# Source0-md5:	d9dedf4e01459512f4b2c897936adda6
 URL:		http://trac.enlightenment.org/e/wiki/Eio
-BuildRequires:	ecore-devel >= 1.0.0
-BuildRequires:	eina-devel >= 1.0.0
+BuildRequires:	ecore-devel >= 1.2.0
+BuildRequires:	eet-devel >= 1.6.0
+BuildRequires:	eina-devel >= 1.2.0
 BuildRequires:	pkgconfig >= 1:0.22
-Requires:	ecore >= 1.0.0
-Requires:	eina >= 1.0.0
+Requires:	ecore >= 1.2.0
+Requires:	eet >= 1.6.0
+Requires:	eina >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -86,14 +88,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS README
-%attr(755,root,root) %{_libdir}/libeio-ver-pre-svn-09.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libeio-ver-pre-svn-09.so.0
+%attr(755,root,root) %{_libdir}/libeio.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libeio.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libeio.so
 %{_libdir}/libeio.la
-%{_includedir}/eio-0
+%{_includedir}/eio-1
 %{_pkgconfigdir}/eio.pc
 
 %if %{with static_libs}
