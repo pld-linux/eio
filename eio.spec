@@ -6,23 +6,26 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static libraries
 #
+%define		ecore_ver	1.7.6
+%define		eet_ver		1.7.6
+%define		eina_ver	1.7.6
 Summary:	Enlightenment Input Output Library
 Summary(pl.UTF-8):	Enlightenment Input Output - biblioteka wejścia/wyjścia z projektu Enlightenment
 Name:		eio
-Version:	1.7.5
+Version:	1.7.6
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	01c00a1ee8d9958866a300e8f64c52d9
+# Source0-md5:	202cced4c3cdeafa0249f01a45464586
 URL:		http://trac.enlightenment.org/e/wiki/Eio
-BuildRequires:	ecore-devel >= 1.7.5
-BuildRequires:	eet-devel >= 1.7.5
-BuildRequires:	eina-devel >= 1.7.5
+BuildRequires:	ecore-devel >= %{ecore_ver}
+BuildRequires:	eet-devel >= %{eet_ver}
+BuildRequires:	eina-devel >= %{eina_ver}
 BuildRequires:	pkgconfig >= 1:0.22
-Requires:	ecore >= 1.7.5
-Requires:	eet >= 1.7.5
-Requires:	eina >= 1.7.5
+Requires:	ecore >= %{ecore_ver}
+Requires:	eet >= %{eet_ver}
+Requires:	eina >= %{eina_ver}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,9 +45,9 @@ Summary:	Header files for Eio library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Eio
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	ecore-devel >= 1.7.5
-Requires:	eet-devel >= 1.7.5
-Requires:	eina-devel >= 1.7.5
+Requires:	ecore-devel >= %{ecore_ver}
+Requires:	eet-devel >= %{eet_ver}
+Requires:	eina-devel >= %{eina_ver}
 Conflicts:	libeio-devel
 
 %description devel
