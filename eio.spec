@@ -12,12 +12,12 @@
 Summary:	Enlightenment Input Output Library
 Summary(pl.UTF-8):	Enlightenment Input Output - biblioteka wejścia/wyjścia z projektu Enlightenment
 Name:		eio
-Version:	1.7.6
+Version:	1.7.6.1
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	202cced4c3cdeafa0249f01a45464586
+# Source0-md5:	398e914b3c01077e86c79a2def666864
 URL:		http://trac.enlightenment.org/e/wiki/Eio
 BuildRequires:	ecore-devel >= %{ecore_ver}
 BuildRequires:	eet-devel >= %{eet_ver}
