@@ -1,3 +1,4 @@
+# NOTE: for versions >= 1.8 see efl.spec
 # TODO
 # - -devel conflicts with libeio-devel
 #	file /usr/lib64/libeio.la from install of eio-devel-0.1.0.65643-1.x86_64 conflicts with file from package libeio-devel-1.0-1.x86_64
