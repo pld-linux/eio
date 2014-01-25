@@ -7,18 +7,18 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static libraries
 #
-%define		ecore_ver	1.7.9
-%define		eet_ver		1.7.9
-%define		eina_ver	1.7.9
+%define		ecore_ver	1.7.10
+%define		eet_ver		1.7.10
+%define		eina_ver	1.7.10
 Summary:	Enlightenment Input Output Library
 Summary(pl.UTF-8):	Enlightenment Input Output - biblioteka wejścia/wyjścia z projektu Enlightenment
 Name:		eio
-Version:	1.7.9
-Release:	2
+Version:	1.7.10
+Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	d4ce4c9c5882538f5e49ccf963de3595
+# Source0-md5:	7c36b8e98ba06ecd2ab6c67768601944
 URL:		http://trac.enlightenment.org/e/wiki/Eio
 BuildRequires:	ecore-devel >= %{ecore_ver}
 BuildRequires:	eet-devel >= %{eet_ver}
